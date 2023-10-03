@@ -21,11 +21,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Get player input
-const playerSelection = "Rock";
-console.log("The player chooses: " + playerSelection)
+function game() {
+    const playerSelection = "Rock";
+    console.log("The player chooses: " + playerSelection);
 
-const computerSelection = getComputerChoice();
-console.log("The computer chooses: " + computerSelection);
+    const computerSelection = getComputerChoice();
+    console.log("The computer chooses: " + computerSelection);
+    
+    for (let i = 0; i < 5; i++) {
+        playRound(playerSelection, computerSelection);
+    }
 
-console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+game();
+
+
+
